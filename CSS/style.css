@@ -1,0 +1,35 @@
+.background {
+    background-color: #777;
+    height: 100vh;
+}
+.window {
+    background-color: #efefef;
+    border-radius: 40px;
+    height: 95vh;
+}
+.cinza-meio {
+    background-color: #d9d9d9;
+}
+.btn-main {
+    border-radius: 100px;
+    display: block; 
+    width: 80%;
+}
+.salas {
+    background-color: #d9d9d9;
+    height: 50%;
+    width: 90%;
+    border-radius: 30px;
+}
+.button-sala {
+    border-radius: 100px;
+}
+#text-box {
+    background-color:#d9d9d9;
+    border: 0;
+    border-radius: 100px 0 0 100px;
+}
+#msg-send {
+    border-radius: 0 100px 100px 0;
+    background-color: #d9d9d9;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="container-fluid background">
+        <div class="row pt-3 gx-4">
+            <div class="col-lg-3">
+                <div class="window">
+                    <p class="pt-4 ms-4 d-inline-block" >Usuário:</p>
+                    <p id="name" class="d-inline-block"></p>
+                    <button type="button" class="btn cinza-meio btn-main mx-auto" onclick="myModal.show(modalToggle);">Alterar Usuário</button>
+                    
+                    <p class="pt-4 ms-4 d-inline-block" >Sala:</p>
+                    <p id="room" class="d-inline-block">SALA1</p>
+                    <button type="button" class="btn cinza-meio btn-main mx-auto">Sair da Sala</button>
+                
+                    <div class="salas mt-5 mx-auto overflow-y-auto overflow-x-hidden">
+
+                        <form class="row pt-4">
+                            <div class="col-md-8">
+                                <input type="text" readonly class="form-control-plaintext ms-3" id="sala1" value="SALA2">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="button-sala" type="button" value="Entrar"></button>
+                            </div>
+                        </form>
+
+                        <form class="row pt-4">
+                            <div class="col-md-8">
+                                <input type="text" readonly class="form-control-plaintext ms-3" id="sala2" value="SALA3">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="button-sala" type="button" value="Entrar"></button>
+                            </div>
+                        </form>
+
+                        <form class="row pt-4">
+                            <div class="col-md-8">
+                                <input type="text" readonly class="form-control-plaintext ms-3" id="sala3" value="SALA4">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="button-sala" type="button" value="Entrar"></button>
+                            </div>
+                        </form>
+
+                        <form class="row pt-4">
+                            <div class="col-md-8">
+                                <input type="text" readonly class="form-control-plaintext ms-3" id="sala4" value="SALA5">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="button-sala" type="button" value="Entrar"></button>
+                            </div>
+                        </form>
+
+                        <form class="row pt-4">
+                            <div class="col-md-8">
+                                <input type="text" readonly class="form-control-plaintext ms-3" id="sala5" value="SALA6">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="button-sala" type="button" value="Entrar"></button>
+                            </div>
+                        </form>
+
+                        <form class="row pt-4">
+                            <div class="col-md-8">
+                                <input type="text" readonly class="form-control-plaintext ms-3" id="sala7" value="SALA8">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="button-sala" type="button" value="Entrar"></button>
+                            </div>
+                        </form>
+
+                        <form class="row pt-4">
+                            <div class="col-md-8">
+                                <input type="text" readonly class="form-control-plaintext ms-3" id="sala9" value="SALA10">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="button-sala" type="button" value="Entrar"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="window d-flex flex-column">
+                    <div class="col-12 overflow-x-hidden overflow-y-auto" id="window-msg">
+                        <div class="pt-4"></div>
+                        <div class="msg col-12 ms-4">
+                            <p class="msg-autor">NOME1:</p>
+                            <p class="msg-corpo">Lorem Ipsum Sit Amet</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 mt-auto" id="window-text">
+                        <form class="row">
+                            <div class="input-group w-75 mx-auto mb-3">
+                                <input class="mx-auto py-2 col-11 ps-4" id="text-box" type="text">
+                                <button class="btn col-1 pe-2" type="button" id="msg-send" onclick="enviarMensagem()"><img src="./media/send-btn.png" alt="" class="h-75"></button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="modal" id="login-modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">Faça login para continuar</h1>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="text" id="input-nick">
+                        <button type="button" onclick="sendLogin()">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
